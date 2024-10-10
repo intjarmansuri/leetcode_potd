@@ -1,4 +1,4 @@
-/* ------------ Approach : Two Pointer
+/* ------------ Approach 1 : Two Pointer
 Time Complexity : O(N)
 Space Complexity : O(N) ---------------------- */
 
@@ -24,6 +24,33 @@ public:
             }
             ramp = max(ramp, j-i);
             j++;
+        }
+        return ramp;
+    }
+};
+
+/* ------------ Approach 2 : Monotonic Stack
+Time Complexity : O(N)
+Space Complexity : O(N) ---------------------- */
+
+class Solution {
+public:
+    int maxWidthRamp(vector<int>& nums) {
+        int n = nums.size();
+        stack<int> st;
+
+        for(int i = 0; i < n; i++) {
+            if(st.empty() || nums[st.top()] > nums[i]) {
+                st.push(i);
+            }
+        }
+
+        int ramp = 0;
+        for(int j = n-1; j >= 0; j--) {
+            while(!st.empty() && nums[st.top()] <= nums[j]) {
+                ramp = max(ramp, j - st.top());
+                st.pop();
+            }
         }
         return ramp;
     }
