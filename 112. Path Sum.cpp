@@ -24,7 +24,6 @@ public:
 // Time Complexity : O(N)
 // Space Complexity : O(H)
 
-
 class Solution {
 public:
     bool hasPathSum(TreeNode* root, int targetSum) {
