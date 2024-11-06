@@ -33,7 +33,7 @@ Let’s connect! Follow me on these platforms to share ideas or just keep up wit
 ---
 
 ## 🏆 Achievements:
-- **300+ Problems Solved** ✅
+- **400+ Problems Solved** ✅
 - **Increased Efficiency** ⏳
 - **Enhanced Coding Techniques** 🔥
 
